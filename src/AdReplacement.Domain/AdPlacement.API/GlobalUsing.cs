@@ -1,0 +1,13 @@
+﻿global using AdPlacement.Domain.Abstractions;
+global using AdPlacement.Infrastructure.Health;
+global using AdPlacement.Infrastructure.Index;
+global using AdPlacement.Infrastructure.Index.Abstactions;
+global using AdPlacements.Application.Commands;
+global using AdPlacements.Application.Common;
+global using AdPlacements.Application.Queries;
+global using HealthChecks.UI.Client;
+global using MediatR;
+global using Microsoft.AspNetCore.Diagnostics.HealthChecks;
+global using Microsoft.Extensions.Diagnostics.HealthChecks;
+global using Serilog;
+global using System.Text;
