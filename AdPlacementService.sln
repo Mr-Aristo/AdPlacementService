@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.API", "src\AdReplacement.Domain\AdPlacement.API\AdPlacement.API.csproj", "{93B96279-E701-4332-A4B8-554EE9D5D9F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.Tests", "tests\AdPlacement.Tests\AdPlacement.Tests.csproj", "{EBAC04BF-7ADF-493E-A334-BAE42F37328C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,9 +37,16 @@ Global
 		{93B96279-E701-4332-A4B8-554EE9D5D9F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93B96279-E701-4332-A4B8-554EE9D5D9F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93B96279-E701-4332-A4B8-554EE9D5D9F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBAC04BF-7ADF-493E-A334-BAE42F37328C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBAC04BF-7ADF-493E-A334-BAE42F37328C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBAC04BF-7ADF-493E-A334-BAE42F37328C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBAC04BF-7ADF-493E-A334-BAE42F37328C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBAC04BF-7ADF-493E-A334-BAE42F37328C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4CB260D3-E22D-419D-90BA-1BE6AFFA5636}
