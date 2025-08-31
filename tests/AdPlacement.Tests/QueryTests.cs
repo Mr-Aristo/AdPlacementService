@@ -1,5 +1,4 @@
 ﻿using AdPlacement.Infrastructure.Index;
-using AdPlacement.Infrastructure.Index.Abstactions;
 using FluentAssertions;
 using Microsoft.Extensions.Logging;
 
