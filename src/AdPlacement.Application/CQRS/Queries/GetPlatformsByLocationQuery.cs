@@ -1,5 +1,5 @@
 using AdPlacement.Domain.Abstractions;
-using AdReplacement.Domain.Models.Dtos;
+using AdPlacementDomain.Models.Dtos;
 using MediatR;
 
 

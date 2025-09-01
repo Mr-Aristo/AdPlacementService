@@ -1,5 +1,5 @@
 ﻿
-using AdReplacement.Domain.Models;
+using AdPlacementDomain.Models;
 using FluentAssertions;
 
 namespace AdPlacement.Tests;

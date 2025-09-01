@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.Domain", "src\A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.Infrastructure", "src\AdPlacement.Infrastructure\AdPlacement.Infrastructure.csproj", "{34D5CA7E-0146-E226-F79B-9AA58762D1C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.API", "src\AdReplacement.Domain\AdPlacement.API\AdPlacement.API.csproj", "{93B96279-E701-4332-A4B8-554EE9D5D9F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdPlacement.API", "src\AdPlacement.API\AdPlacement.API.csproj", "{93B96279-E701-4332-A4B8-554EE9D5D9F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject

@@ -17,9 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AdPlacement.Application\AdPlacement.Application.csproj" />
-    <ProjectReference Include="..\..\AdPlacement.Domain\AdPlacement.Domain.csproj" />
-    <ProjectReference Include="..\..\AdPlacement.Infrastructure\AdPlacement.Infrastructure.csproj" />
+    <ProjectReference Include="..\AdPlacement.Application\AdPlacement.Application.csproj" />
+    <ProjectReference Include="..\AdPlacement.Domain\AdPlacement.Domain.csproj" />
+    <ProjectReference Include="..\AdPlacement.Infrastructure\AdPlacement.Infrastructure.csproj" />
   </ItemGroup>
+
 
 </Project>

@@ -1,4 +1,4 @@
-﻿using AdReplacement.Domain.Models;
+﻿using AdPlacementDomain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

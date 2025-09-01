@@ -1,5 +1,5 @@
 ﻿using AdPlacement.Infrastructure.Index.Abstactions;
-using AdReplacement.Domain.Models;
+using AdPlacementDomain.Models;
 
 namespace AdPlacement.Infrastructure.Index;
 

@@ -16,10 +16,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\AdPlacement.API\AdPlacement.API.csproj" />
     <ProjectReference Include="..\..\src\AdPlacement.Application\AdPlacement.Application.csproj" />
     <ProjectReference Include="..\..\src\AdPlacement.Domain\AdPlacement.Domain.csproj" />
     <ProjectReference Include="..\..\src\AdPlacement.Infrastructure\AdPlacement.Infrastructure.csproj" />
-    <ProjectReference Include="..\..\src\AdReplacement.Domain\AdPlacement.API\AdPlacement.API.csproj" />
   </ItemGroup>
 
   <ItemGroup>

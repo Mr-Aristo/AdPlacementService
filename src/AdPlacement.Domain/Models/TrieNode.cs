@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdReplacement.Domain.Models
+namespace AdPlacementDomain.Models
 {
     public sealed class TrieNode
     {

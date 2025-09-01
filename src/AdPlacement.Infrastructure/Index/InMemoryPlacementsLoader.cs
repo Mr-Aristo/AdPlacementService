@@ -1,7 +1,7 @@
 ﻿using AdPlacement.Domain.Abstractions;
 using AdPlacement.Infrastructure.Index.Abstactions;
-using AdReplacement.Domain.Models;
-using AdReplacement.Domain.Models.Dtos;
+using AdPlacementDomain.Models;
+using AdPlacementDomain.Models.Dtos;
 using Microsoft.Extensions.Logging;
 
 namespace AdPlacement.Infrastructure.Index;

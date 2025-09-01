@@ -1,4 +1,4 @@
-﻿using AdReplacement.Domain.Models.Dtos;
+﻿using AdPlacementDomain.Models.Dtos;
 
 namespace AdPlacement.Domain.Abstractions;
 

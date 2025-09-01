@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AdReplacement.Domain.Models.Dtos;
+namespace AdPlacementDomain.Models.Dtos;
 
 public sealed record LoadResult(
     bool Success,

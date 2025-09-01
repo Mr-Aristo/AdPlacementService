@@ -2,7 +2,7 @@
 
 using System;
 
-namespace AdReplacement.Domain.Models;
+namespace AdPlacementDomain.Models;
 
 public sealed class PlatformIndex
 {
