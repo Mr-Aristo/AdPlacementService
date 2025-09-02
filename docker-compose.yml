@@ -1,56 +1,60 @@
-version: "3.9"
+version: '3.9'
+
 services:
   api:
     build:
-      context: ./src
-      dockerfile: AdPlacements.Api/Dockerfile
-    container_name: adplacements_api
+      context: .
+      dockerfile: src/AdPlacements.Api/Dockerfile
+    container_name: adplacements-api
     ports:
       - "5000:8080"
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-      - DOTNET_RUNNING_IN_CONTAINER=true
-      - DOTNET_USE_POLLING_FILE_WATCHER=true
-      - DOTNET_HOST_PATH=/usr/share/dotnet/dotnet
-      - ConnectionStrings__Elasticsearch=http://elasticsearch:9200
+      - DOTNET_ENVIRONMENT=Production
+      - Serilog__WriteTo__0__Name=Http
+      - Serilog__WriteTo__0__Args__requestUri=http://logstash:8080
+      - Serilog__WriteTo__0__Args__textFormatter=Serilog.Formatting.Compact.CompactJsonFormatter, Serilog.Formatting.Compact
     depends_on:
       - elasticsearch
-      - redis
-
-  redis:
-    image: redis:7
-    container_name: adplacements_redis
-    ports:
-      - "6379:6379"
+      - logstash
+    networks:
+      - elk
 
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.2
-    container_name: adplacements_elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.12.0
+    container_name: elasticsearch
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=false
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+      - ES_JAVA_OPTS=-Xms1g -Xmx1g
     ports:
       - "9200:9200"
-
-  kibana:
-    image: docker.elastic.co/kibana/kibana:8.12.2
-    container_name: adplacements_kibana
-    environment:
-      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
-    ports:
-      - "5601:5601"
-    depends_on:
-      - elasticsearch
+    networks:
+      - elk
 
   logstash:
-    image: docker.elastic.co/logstash/logstash:8.12.2
-    container_name: adplacements_logstash
-    environment:
-      - "LS_JAVA_OPTS=-Xmx256m -Xms256m"
+    image: docker.elastic.co/logstash/logstash:8.12.0
+    container_name: logstash
     volumes:
-      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+      - ./ops/logstash/pipeline:/usr/share/logstash/pipeline
     ports:
-      - "5044:5044"
+      - "8080:8080"
     depends_on:
       - elasticsearch
+    networks:
+      - elk
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:8.12.0
+    container_name: kibana
+    ports:
+      - "5601:5601"
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
+    depends_on:
+      - elasticsearch
+    networks:
+      - elk
+
+networks:
+  elk:
+    driver: bridge
